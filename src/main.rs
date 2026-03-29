@@ -41,12 +41,30 @@ async fn main() {
         let mouse_center_offset: Vec2 = Vec2::from(mouse_position()) - center;
 
 
+        
+        update_interaction_system(&mut numbers, &mut circle_slots, mouse_center_offset);
 
+
+
+        let mut slot_overloaded = [false; 10];
         for i in 0..10 {
-            let rotation = i as f32 * (2.0 * PI / 10.0);
+            let sum = check_adjacent_sum(&circle_slots, i);
+            if sum > 17 {
+                // If this triplet is > 17, all three slots in the triplet are "Overloaded"
+                slot_overloaded[i] = true;
+                slot_overloaded[(i + 9) % 10] = true;
+                slot_overloaded[(i + 1) % 10] = true;
+            }
+        }
+
+        for i in 0..10 {    
+            let rotation = (i as f32 * (2.0 * PI / 10.0)) - (PI / 2.0) - (2.0 * PI / 10.0 / 2.0);
             let size = vec2(500.0, 500.0); // Consistent size
 
-            let color = if i%2 == 0 { palette::LWHITE } else { palette::MWHITE };
+            let mut color = if i%2 == 0 { palette::LWHITE } else { palette::MWHITE };
+            if slot_overloaded[i] {
+                color = RED;
+            }
         
             draw_texture_ex(
                 &assets.textures.slice,
@@ -63,7 +81,7 @@ async fn main() {
             );
         }
 
-        update_interaction_system(&mut numbers, &mut circle_slots, mouse_center_offset);
+
 
         // Inside your render loop:
         for num in &numbers {
@@ -109,7 +127,7 @@ async fn main() {
                 // Text Label for Slot Index
                 draw_text(&format!("{}", i), visual_pos.x + 10.0, visual_pos.y + 10.0, 20.0, palette::LGRAY);
             }
-            
+
         }
 
 

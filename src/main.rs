@@ -1,15 +1,12 @@
 
 
-use web_sys::window;
+use macroquad::prelude::*;
 
-fn main() {
-    console_error_panic_hook::set_once();
-
-    let document = window()
-        .and_then(|win| win.document())
-        .expect("Could not access the document");
-    let body = document.body().expect("Could not access document.body");
-    let text_node = document.create_text_node("Hello, world from Vanilla Rust!");
-    body.append_child(text_node.as_ref())
-        .expect("Failed to append text");
+#[macroquad::main("My Game")]
+async fn main() {
+    loop {
+        clear_background(RED);
+        draw_text("HELLO FROM WASM", 20.0, 20.0, 30.0, DARKGRAY);
+        next_frame().await
+    }
 }

@@ -2,7 +2,7 @@
 
 <p align="center"><img src="assets/icon/sum17_icon.png" height="256"></p>
 
-# <center> Triplet Sum Puzzle Game </center>
+# <p align="center"> Triplet Sum Puzzle Game <p align="center">
 
 <p align="center">
     <strong>Live Demo</strong>: <a href="https://graphictin.github.io/sum17/">graphictin.github.io/sum17/</a>
@@ -13,8 +13,8 @@
 
 <p align="center">
     A technical prototype and interaction study built with 
-    <span style="color: Orange; font-size: large; font-weight: bold;">Rust</span> and 
-    <span style="color: Red; font-size: large; font-weight: bold;">Macroquad</span>. <br>
+    $\color{Orange}\large{\textbf{Rust}}$ and 
+    $\color{Red}\large{\textbf{Macroquad}}$. <br>
     This project explores <code>circular constraint</code> logic and 
     <code>bi-directional data management</code> in a 2D game environment.
 </p>

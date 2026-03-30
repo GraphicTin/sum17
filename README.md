@@ -5,7 +5,7 @@
 **Live Demo**: [graphictin.github.io/sum17/](https://graphictin.github.io/sum17/)
 
 A technical prototype and interaction study 
-built with <span style="color:orange">**Rust**</span> and <span style="color:red">**Macroquad**</span>. <br>
+built with **$\color{Orange}{\textsf{Rust}}$** and <span style="color:red">**Macroquad**</span>. <br>
 This project explores `circular constraint` logic and `bi-directional data management` in a 2D game environment.
 
 $\color{Orange}{\textsf{Rust}}$

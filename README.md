@@ -8,7 +8,8 @@ A technical prototype and interaction study
 built with <span style="color:orange">**Rust**</span> and <span style="color:red">**Macroquad**</span>. <br>
 This project explores `circular constraint` logic and `bi-directional data management` in a 2D game environment.
 
-$\color{Orange}{\textsf{**Rust**}}$
+$\color{Orange}{\textsf{Rust}}$
+$\color{Orange}{\textbf{Rust}}$
 
 <span style="color:red"></span>
 <span style="color:orange"></span>

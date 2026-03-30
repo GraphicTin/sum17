@@ -1,6 +1,8 @@
 
 
+#![allow(unused_imports)]
+
 mod number;
 
-#[allow(unused_imports)]
 pub use number::Number;
+

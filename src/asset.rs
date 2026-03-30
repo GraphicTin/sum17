@@ -15,7 +15,7 @@ pub struct Assets {
 impl Assets {
     pub async fn load() -> Result<Self, String> {
 
-        let slice = load_texture("assets/slice/slice (1).png")
+        let slice = load_texture("assets/slice/slice.png")
             .await.map_err(|e| e.to_string())?;
 
         let font = load_ttf_font("assets/font/bungee-regular.ttf")
